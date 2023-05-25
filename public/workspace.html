@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>workspace</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    
+    <svg xmlns="http://www.w3.org/2000/svg"></svg>
+    <div class="container">
+        <form class="invite-form">
+            <h4>Add user</h4>
+            <input
+            type="text"
+            name="name"
+            class="invited-email-input"
+            placeholder="user email"
+            />
+            <button type="submit" class="btn submit-btn">submit</button>
+        </form>
+        <form class="file-form">
+            <h4>File Upload</h4>
+            <div class="form-row">
+                <label for="image" class="form-label">Upload Image:</label>
+                <input type="file" id="image" accept="image/*" >
+            </div>
+            <!-- end of single row -->
+            
+                <button id="apply" class="btn btn-block">Apply</button>
+                <button id="remove" class="btn btn-block">Remove</button>
+                <br>
+                <br>
+                <button id="back">back</button>
+            </div>
+        </form>
+    </div>
+    <img src="" alt="" id="background">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/workspace.js" type="module"></script>
+</body>
+</html>
