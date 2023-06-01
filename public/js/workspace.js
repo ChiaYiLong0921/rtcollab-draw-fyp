@@ -11,10 +11,29 @@ const id = new URLSearchParams(params).get('id')
 const wsid = new URLSearchParams(params).get('wsid')
 const back = document.querySelector('#back')
 const localData = JSON.parse(localStorage.getItem(`${id}`))
+
+let isAuth = false
+const authCheck = function () {
+  localData.user.workspaces.forEach((worksp) => {
+    if (worksp === wsid) {
+      isAuth = true
+    }
+  })
+}
+authCheck()
+
+console.log('isAuth: ', isAuth)
+
 if (!localData) {
   alert('You are unauthorize')
   window.location.href = `index.html`
 }
+
+if (!isAuth) {
+  alert('Cannot access workspace')
+  window.location.href = `home.html?id=${id}`
+}
+
 const token = localData.token
 const user = localData.user
 const invite = document.querySelector('.invite-form')
